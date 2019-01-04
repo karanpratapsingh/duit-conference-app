@@ -5,7 +5,7 @@ import {
     StyleSheet
 } from 'react-native';
 import * as ExpoIcon from '@expo/vector-icons/';
-import AppStyle from '../styles/AppStyle';
+import AppStyle from '../../styles/AppStyle';
 import { responsiveFontSize } from 'react-native-responsive-dimensions';
 
 const { primaryThemeColor, lightGrey } = AppStyle;
@@ -16,7 +16,7 @@ class ShortListedPlacesTabScreen extends Component {
 
         title: 'Shortlist',
         tabBarIcon: ({ focused, tintColor }) => (<ExpoIcon.AntDesign
-            name={'star'}
+            name={'heart'}
             color={focused ? primaryThemeColor : lightGrey}
             size={responsiveFontSize(3.6)}
         />)
@@ -26,7 +26,7 @@ class ShortListedPlacesTabScreen extends Component {
 
         return (
             <View style={styles.container}>
-                <Text>ShortListedPlacesTabScreen</Text>
+                <Text style={{ fontSize: 25, fontWeight: '700' }}>ShortListedPlacesTabScreen</Text>
             </View>
         );
     }

@@ -1,7 +1,8 @@
-import TravelPlacesTabScreen from '../screen/TravelPlacesTabScreen';
-import ShortListedPlacesTabScreen from '../screen/ShortListedPlacesTabScreen';
+import TravelPlacesTabScreen from '../screen/TravelPlacesTabScreen/TravelPlacesTabScreen';
+import TravelPlacesDetailViewScreen from '../screen/TravelPlacesTabScreen/TravelPlacesDetailViewScreen';
+import ShortListedPlacesTabScreen from '../screen/ShortListedPlacesTabScreen/ShortListedPlacesTabScreen';
+import { createAppContainer, createMaterialTopTabNavigator, createStackNavigator } from 'react-navigation';
 import AppStyle from '../styles/AppStyle';
-import { createAppContainer, createMaterialTopTabNavigator } from 'react-navigation';
 
 const AppTabNavigator = createMaterialTopTabNavigator({
 
@@ -42,4 +43,10 @@ const AppTabNavigator = createMaterialTopTabNavigator({
         }
 });
 
-export default AppContainer = createAppContainer(AppTabNavigator);
+const AppStackNavigator = createStackNavigator({
+
+    AppTabNavigator: { screen: AppTabNavigator },
+    TravelPlacesDetailViewScreen: { screen: TravelPlacesDetailViewScreen }
+}, { headerMode: 'none' })
+
+export default AppContainer = createAppContainer(AppStackNavigator);

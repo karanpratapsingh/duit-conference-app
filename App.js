@@ -1,23 +1,58 @@
 import React from 'react';
-import { Font } from 'expo';
+import { View, StyleSheet } from 'react-native';
+import { SplashScreen, Font } from 'expo';
 import AppContainer from './src/navigation/App.Navigation';
 
 export default class App extends React.Component {
 
   constructor(props) {
 
-    super(props);    
+    super(props);
+
+    this.state = {
+
+      isFontLoaded: false
+    };
+
+    SplashScreen.preventAutoHide();
   };
 
   componentDidMount = async () => {
 
-    
+    await Font.loadAsync({
+
+      'Nunito': require('./assets/fonts/Nunito-Regular.ttf')
+    });
+
+    this.setState({ ...this.state, isFontLoaded: true });
+
+    SplashScreen.hide();
   };
 
   render() {
 
     return (
-      <AppContainer />
+
+      <View style={styles.appStyle}>
+
+        {
+          this.state.isFontLoaded ? (
+
+            <AppContainer />
+          ) 
+          : 
+          <View></View>
+        }
+      </View>
     );
   }
 };
+
+const styles = StyleSheet.create({
+
+  appStyle: {
+
+    flex: 1,
+    backgroundColor: '#FAFAFA'
+  }
+});

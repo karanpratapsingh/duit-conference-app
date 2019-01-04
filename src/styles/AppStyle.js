@@ -1,6 +1,6 @@
 const AppStyle = {
 
-    primaryThemeColor: '#4282EE', // #a13fd9 #0baaee ##0652F6 #8d44ad
+    primaryThemeColor: '#4282EE',
     primaryBackgroundColor: '#FAFAFA',
     lightGrey: '#9E9E9E'
 };
