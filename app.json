@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "duit-conference-app",
+    "name": "Travel",
     "slug": "duit-conference-app",
     "privacy": "public",
     "sdkVersion": "31.0.0",
@@ -13,7 +13,7 @@
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {

@@ -1,13 +1,18 @@
 import TravelPlacesTabScreen from '../screen/TravelPlacesTabScreen/TravelPlacesTabScreen';
 import TravelPlacesDetailViewScreen from '../screen/TravelPlacesTabScreen/TravelPlacesDetailViewScreen';
-import ShortListedPlacesTabScreen from '../screen/ShortListedPlacesTabScreen/ShortListedPlacesTabScreen';
+import FavouritePlacesTabScreen from '../screen/FavouritePlacesTabScreen/FavouritePlacesTabScreen';
+import ReachOutTabScreen from '../screen/ReachOutTabScreen/ReachOutTabScreen';
+import UserProfileTabScreen from '../screen/UserProfileTabScreen/UserProfileTabScreen';
+
 import { createAppContainer, createMaterialTopTabNavigator, createStackNavigator } from 'react-navigation';
 import AppStyle from '../styles/AppStyle';
 
 const AppTabNavigator = createMaterialTopTabNavigator({
 
     TravelPlacesTabScreen: { screen: TravelPlacesTabScreen },
-    ShortListedPlacesTabScreen: { screen: ShortListedPlacesTabScreen }
+    FavouritePlacesTabScreen: { screen: FavouritePlacesTabScreen },
+    ReachOutTabScreen: { screen: ReachOutTabScreen },
+    UserProfileTabScreen: { screen: UserProfileTabScreen }
 },{
         tabBarPosition: 'bottom',
         swipeEnabled: true,

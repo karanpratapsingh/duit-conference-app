@@ -8,7 +8,7 @@ import * as ExpoIcon from '@expo/vector-icons/';
 import AppStyle from '../../styles/AppStyle';
 import { responsiveFontSize } from 'react-native-responsive-dimensions';
 
-const { primaryThemeColor, lightGrey } = AppStyle;
+const { primaryThemeColor, primaryBackgroundColor, lightGrey } = AppStyle;
 
 class ShortListedPlacesTabScreen extends Component {
 
@@ -26,7 +26,7 @@ class ShortListedPlacesTabScreen extends Component {
 
         return (
             <View style={styles.container}>
-                <Text style={{ fontSize: 25, fontWeight: '700' }}>ShortListedPlacesTabScreen</Text>
+                <Text style={{ fontSize: 40, fontFamily: 'Nunito' }}>Favourites</Text>
             </View>
         );
     }
@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
     container: {
 
         flex: 1,
+        backgroundColor: primaryBackgroundColor,
         alignItems:'center',
         justifyContent:'center'
     }

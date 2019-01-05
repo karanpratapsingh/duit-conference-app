@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { SplashScreen, Font } from 'expo';
 import AppContainer from './src/navigation/App.Navigation';
 
@@ -38,11 +38,14 @@ export default class App extends React.Component {
         {
           this.state.isFontLoaded ? (
 
-            <AppContainer />
+            // <AppContainer />
+            <Text style={{ fontSize: 24, fontFamily: 'Nunito' }}>Hello, Welcome to React Native :)</Text>
+
           ) 
           : 
           <View></View>
         }
+
       </View>
     );
   }
@@ -53,6 +56,8 @@ const styles = StyleSheet.create({
   appStyle: {
 
     flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: '#FAFAFA'
   }
 });
