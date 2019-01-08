@@ -120,7 +120,7 @@ class TravelPlacesTabScreen extends Component {
 
                 <StatusBar barStyle={'dark-content'} animated />
 
-                {/* <SearchBar
+                <SearchBar
                     noIcon
                     lightTheme
                     platform={'ios'}
@@ -134,9 +134,9 @@ class TravelPlacesTabScreen extends Component {
                         backgroundColor: primaryBackgroundColor,
                     }}
                     inputStyle={{ color: '#000', fontSize: 36, fontFamily: 'Nunito', backgroundColor: 'transparent', height: responsiveHeight(8) }}
-                    placeholder={'Search...'} /> */}
+                    placeholder={'Search...'} />
   
-                {/* {
+                {
                     filteredPlacesData.length === 0 ? (
 
                         <View style={{ alignItems: 'center', backgroundColor: 'transparent', paddingTop: responsiveHeight(5) }}>
@@ -160,7 +160,7 @@ class TravelPlacesTabScreen extends Component {
                         />
                     )
 
-                } */}
+                }
                 
             </View>
         );

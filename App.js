@@ -38,8 +38,7 @@ export default class App extends React.Component {
         {
           this.state.isFontLoaded ? (
 
-            // <AppContainer />
-            <Text style={{ fontSize: 24, fontFamily: 'Nunito' }}>Hello, Welcome to React Native :)</Text>
+            <AppContainer />
 
           ) 
           : 
@@ -56,8 +55,6 @@ const styles = StyleSheet.create({
   appStyle: {
 
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
     backgroundColor: '#FAFAFA'
   }
 });
