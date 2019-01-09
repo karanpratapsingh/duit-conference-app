@@ -26,7 +26,7 @@ const AppTabNavigator = createMaterialTopTabNavigator({
             pressOpacity: 0.8,
             indicatorStyle: {
 
-                height: 4,
+                height: 0,
                 borderRadius: 10,
                 backgroundColor: AppStyle.primaryThemeColor
             },

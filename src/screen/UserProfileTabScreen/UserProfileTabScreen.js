@@ -16,7 +16,7 @@ class UserProfileTabScreen extends Component {
 
         title: 'User',
         tabBarIcon: ({ focused, tintColor }) => (<ExpoIcon.FontAwesome
-            name={'user'}
+            name={focused ? 'user' : 'user-o'}
             color={focused ? primaryThemeColor : lightGrey}
             size={responsiveFontSize(3.6)}
         />)

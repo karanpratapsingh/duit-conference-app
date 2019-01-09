@@ -3,6 +3,7 @@ import {
     View,
     Text,
     StatusBar,
+    Platform,
     RefreshControl,
     StyleSheet
 } from 'react-native';
@@ -24,10 +25,10 @@ class TravelPlacesTabScreen extends Component {
     static navigationOptions = {
 
         title: 'Home',
-        tabBarIcon: ({ focused, tintColor }) => (<ExpoIcon.Entypo
-            name={'aircraft'}
+        tabBarIcon: ({ focused, tintColor }) => (<ExpoIcon.FontAwesome
+            name={focused ? 'map' : 'map-o'}
             color={focused ? primaryThemeColor : lightGrey}
-            size={responsiveFontSize(4.0)}
+            size={responsiveFontSize(3.2)}
         />)
     };
 
@@ -50,10 +51,9 @@ class TravelPlacesTabScreen extends Component {
         let { navigate } = this.props.navigation;
 
         return (
-            <TouchableBounce onPress={() => navigate('TravelPlacesDetailViewScreen', { placeData: place })} style={[styles.itemContainer, { backgroundColor: 'hotpink' }]}>
+            <TouchableBounce onPress={() => navigate('TravelPlacesDetailViewScreen', { placeData: place })} style={[styles.itemContainer, { backgroundColor: 'transparent' }]}>
 
                 <ProgressiveImage
-
                     source={{ uri: images[0] }}
                     imageStyle={{ borderRadius: 10, backgroundColor: '#F0F0F0' }}
                     indicator={Progress.CircleSnail}
@@ -69,12 +69,12 @@ class TravelPlacesTabScreen extends Component {
                         height: '100%',
                     }} />
 
-                <TouchableBounce style={{ position: 'absolute', top: 10, left: 4, justifyContent: 'center' }}>
-                    <ExpoIcon.Ionicons
-                        name={'ios-bookmark'}
+                <TouchableBounce style={{ position: 'absolute', top: responsiveHeight(2), left: responsiveWidth(2), justifyContent: 'center' }}>
+                    <ExpoIcon.AntDesign
+                        name={'hearto'}
                         color={'#FFF'}
                         style={{ marginHorizontal: responsiveWidth(2), textAlign: 'center' }}
-                        size={responsiveFontSize(5.4)}
+                        size={responsiveFontSize(4.4)}
                     />
                 </TouchableBounce>
 
@@ -127,13 +127,16 @@ class TravelPlacesTabScreen extends Component {
                     value={this.state.searchQuery}
                     onChangeText={this._handleSearch}
                     cancelButtonTitle={'cancel'}
+                    // icon={{ name: 'search', color: '#404040', style: { fontSize: 32, marginBottom: responsiveHeight(0.0) } }}
+                    clearIcon={{ name: 'close', color: '#404040', style: { fontSize: 28, marginTop: responsiveHeight(0.2) } }}
+                    cancelButtonTitle={'Cancel'}
                     containerStyle={{
                         borderWidth: 0,
                         borderTopColor: 'transparent',
                         borderBottomColor: 'rgba(0, 0, 0, 0.05)',
                         backgroundColor: primaryBackgroundColor,
                     }}
-                    inputStyle={{ color: '#000', fontSize: 36, fontFamily: 'Nunito', backgroundColor: 'transparent', height: responsiveHeight(8) }}
+                    inputStyle={{ color: '#404040', paddingLeft: responsiveWidth(4), fontSize: responsiveFontSize(4.0), fontFamily: 'Nunito', backgroundColor: 'transparent', height: responsiveHeight(7) }}
                     placeholder={'Search...'} />
   
                 {
@@ -153,7 +156,7 @@ class TravelPlacesTabScreen extends Component {
                                 />
                             }                            
                             itemDimension={responsiveHeight(32)}
-                            spacing={12}
+                            spacing={16}
                             items={filteredPlacesData}
                             style={styles.gridView}
                             renderItem={item => this._renderPlacesList(item)}
@@ -184,7 +187,7 @@ const styles = StyleSheet.create({
 
         justifyContent: 'flex-end',
         borderRadius: 10,
-        height: responsiveHeight(48),
+        height: responsiveHeight(60),
     },
     itemName: {
         

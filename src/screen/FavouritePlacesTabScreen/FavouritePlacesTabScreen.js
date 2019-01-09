@@ -16,7 +16,7 @@ class ShortListedPlacesTabScreen extends Component {
 
         title: 'Shortlist',
         tabBarIcon: ({ focused, tintColor }) => (<ExpoIcon.AntDesign
-            name={'heart'}
+            name={focused ? 'heart' : 'hearto'}
             color={focused ? primaryThemeColor : lightGrey}
             size={responsiveFontSize(3.6)}
         />)

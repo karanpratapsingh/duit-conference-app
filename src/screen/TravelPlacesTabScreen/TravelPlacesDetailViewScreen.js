@@ -105,10 +105,10 @@ class TravelPlacesDetailViewScreen extends Component {
                         height: '100%',
                     }} />
 
-                <View style={{ alignItems: 'flex-start', width: responsiveWidth(100), marginTop: Constants.statusBarHeight + responsiveHeight(1) }}>
+                <View style={{ alignItems: 'flex-start', width: responsiveWidth(100), marginTop: Constants.statusBarHeight + responsiveHeight(1), marginLeft: responsiveWidth(2) }}>
                     <TouchableBounce onPress={() => goBack()}>
-                        <ExpoIcon.AntDesign
-                            name={'leftcircleo'}
+                        <ExpoIcon.Ionicons
+                            name={'ios-arrow-back'}
                             color={'#FFF'}
                             style={{ marginHorizontal: responsiveWidth(2), textAlign: 'center' }}
                             size={responsiveFontSize(5.6)}
