@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Travel",
+    "name": "Travel App",
     "slug": "duit-conference-app",
     "privacy": "public",
     "sdkVersion": "31.0.0",
@@ -14,7 +14,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "cover",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#4282EE"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
